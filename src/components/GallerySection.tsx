@@ -6,33 +6,33 @@ const easeOut: Easing = [0.4, 0, 0.2, 1];
 const galleryImages = [
   {
     src: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=400&fit=crop",
-    alt: "Dog training session outdoors",
-    caption: "Outdoor Training",
+    alt: "אימון כלבים בחוץ",
+    caption: "אימון בחוץ",
   },
   {
     src: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop",
-    alt: "Happy golden retriever after training",
-    caption: "Happy Results",
+    alt: "גולדן רטריבר מאושר אחרי אימון",
+    caption: "תוצאות מאושרות",
   },
   {
     src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=400&fit=crop",
-    alt: "Two dogs playing together",
-    caption: "Socialization",
+    alt: "שני כלבים משחקים יחד",
+    caption: "סוציאליזציה",
   },
   {
     src: "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=400&fit=crop",
-    alt: "Puppy learning commands",
-    caption: "Puppy Class",
+    alt: "גור לומד פקודות",
+    caption: "כיתת גורים",
   },
   {
     src: "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=400&fit=crop",
-    alt: "Dog performing tricks",
-    caption: "Advanced Skills",
+    alt: "כלב מבצע טריקים",
+    caption: "כישורים מתקדמים",
   },
   {
     src: "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=400&h=400&fit=crop",
-    alt: "Dog portrait after grooming",
-    caption: "Before & After",
+    alt: "דיוקן כלב אחרי טיפוח",
+    caption: "לפני ואחרי",
   },
 ];
 
@@ -70,13 +70,13 @@ export function GallerySection() {
           className="text-center mb-16"
         >
           <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">
-            Our Work
+            העבודה שלנו
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            Training in Action
+            אימון בפעולה
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            See the transformations and happy moments from our training sessions.
+            צפו בשינויים וברגעים המאושרים ממפגשי האימון שלנו.
           </p>
         </motion.div>
 

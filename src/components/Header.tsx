@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+  { href: "#services", label: "שירותים" },
+  { href: "#gallery", label: "גלריה" },
+  { href: "#testimonials", label: "המלצות" },
+  { href: "#contact", label: "צור קשר" },
 ];
 
 export function Header() {
@@ -52,7 +52,7 @@ export function Header() {
             ))}
             <ThemeToggle />
             <Button onClick={() => scrollToSection("#contact")} size="sm">
-              Book Now
+              הזמן עכשיו
             </Button>
           </div>
 
@@ -63,7 +63,7 @@ export function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label="הצג/הסתר תפריט"
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -83,13 +83,13 @@ export function Header() {
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-left text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                  className="text-start text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
                 >
                   {link.label}
                 </button>
               ))}
               <Button onClick={() => scrollToSection("#contact")} className="mt-2">
-                Book Now
+                הזמן עכשיו
               </Button>
             </div>
           </motion.div>

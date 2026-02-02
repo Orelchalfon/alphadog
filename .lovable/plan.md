@@ -2,13 +2,13 @@
 
 # AlphaDog — Professional Dog Trainer Portfolio
 
-A high-end, premium portfolio website for AlphaDog dog training services, built with Vite + React, Tailwind CSS (oklch color system), Framer Motion animations, and shadcn/ui components. The site will feature a warm, earthy brand palette with elegant typography and smooth animations.
+A high-end, premium portfolio website for AlphaDog dog training services, built with Vite + React, Tailwind CSS (oklch color system), Framer Motion animations, and shadcn/ui components. The site is **primarily in Hebrew** with RTL layout, featuring a warm, earthy brand palette with elegant typography and smooth animations. No third-party watermarks or branding.
 
 ---
 
 ## 🎨 Visual Identity & Theme Setup
 - Implement the custom oklch color palette with warm browns, creams, and accent tones
-- Configure fonts: **Poppins** (sans-serif for body text) and **Libre Baskerville** (serif for headlines)
+- Configure fonts: **Heebo** (sans-serif for Hebrew body text) and **Libre Baskerville** (serif for headlines)
 - Set up custom shadow variables for premium floating card effects
 - Add dark/light mode toggle with smooth theme transitions
 
@@ -18,9 +18,9 @@ A high-end, premium portfolio website for AlphaDog dog training services, built 
 
 ### 1. Hero Section
 - **High-impact intro** with Framer Motion text reveals (staggered letter/word animations)
-- **Tagline**: "Transforming your dog's behavior with expert care"
+- **Tagline**: "שינוי ההתנהגות של הכלב שלכם בטיפול מקצועי" (Transforming your dog's behavior with expert care)
 - Professional placeholder image with the trainer or dog
-- Primary CTA button: "Book a Consultation"
+- Primary CTA button: "הזמן פגישת ייעוץ" (Book a Consultation)
 
 ### 2. Services Grid
 - **Three service cards** with hover-lift animations:
@@ -45,7 +45,7 @@ A high-end, premium portfolio website for AlphaDog dog training services, built 
   - Service selection dropdown
   - Preferred date picker
   - Message textarea
-- Form submissions saved to **Lovable Cloud database**
+- Form submissions saved to **Supabase database**
 - Success toast notification on submission
 
 ### 6. Footer
@@ -57,7 +57,7 @@ A high-end, premium portfolio website for AlphaDog dog training services, built 
 
 ## ⚙️ Technical Features
 
-### Backend (Lovable Cloud)
+### Backend (Supabase)
 - **Database table** for storing consultation requests
 - Form validation using Zod schema
 - Proper input sanitization and security
@@ -83,7 +83,9 @@ A high-end, premium portfolio website for AlphaDog dog training services, built 
 ## 🚀 Deliverables
 1. Fully responsive portfolio with all sections
 2. Dark/light mode toggle
-3. Working consultation booking form with database storage
+3. Working consultation booking form with Supabase database storage
 4. Smooth Framer Motion animations throughout
 5. Professional placeholder content ready for customization
+6. **Full Hebrew localization with RTL layout**
+7. **No third-party watermarks or branding** (lovable-tagger removed, project-owned OG images)
 

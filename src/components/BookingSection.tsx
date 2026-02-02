@@ -10,17 +10,18 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { CalendarIcon, Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 import { format } from "date-fns";
+import { he } from "date-fns/locale";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 
 const bookingSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters").max(100),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Please enter a valid phone number").max(20),
-  service: z.string().min(1, "Please select a service"),
-  date: z.date({ required_error: "Please select a preferred date" }),
+  name: z.string().min(2, "השם חייב להכיל לפחות 2 תווים").max(100),
+  email: z.string().email("נא להזין כתובת אימייל תקינה"),
+  phone: z.string().min(10, "נא להזין מספר טלפון תקין").max(20),
+  service: z.string().min(1, "נא לבחור שירות"),
+  date: z.date({ required_error: "נא לבחור תאריך מועדף" }),
   message: z.string().max(1000).optional(),
 });
 
@@ -60,8 +61,8 @@ export function BookingSection() {
       if (error) throw error;
 
       toast({
-        title: "Consultation Request Sent!",
-        description: "We'll get back to you within 24 hours to confirm your appointment.",
+        title: "בקשת הייעוץ נשלחה!",
+        description: "נחזור אליכם תוך 24 שעות לאישור הפגישה.",
       });
 
       // Reset form
@@ -70,14 +71,14 @@ export function BookingSection() {
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
-          title: "Validation Error",
+          title: "שגיאת אימות",
           description: error.errors[0].message,
           variant: "destructive",
         });
       } else {
         toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
+          title: "שגיאה",
+          description: "משהו השתבש. נא לנסות שוב.",
           variant: "destructive",
         });
       }
@@ -97,13 +98,13 @@ export function BookingSection() {
           className="text-center mb-16"
         >
           <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">
-            Get Started
+            התחל עכשיו
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            Book Your Consultation
+            הזמן פגישת ייעוץ
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Take the first step towards a better-behaved dog. Fill out the form below and we'll get in touch.
+            צעד ראשון לכלב מתנהג יותר טוב. מלאו את הטופס למטה ונחזור אליכם.
           </p>
         </motion.div>
 
@@ -118,10 +119,10 @@ export function BookingSection() {
           >
             <div>
               <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-                Contact Information
+                פרטי התקשרות
               </h3>
               <p className="text-muted-foreground mb-8">
-                Have questions? Reach out directly or use the form to schedule your free consultation.
+                יש שאלות? צרו קשר ישירות או השתמשו בטופס לתאם פגישת ייעוץ חינם.
               </p>
             </div>
 
@@ -131,7 +132,7 @@ export function BookingSection() {
                   <Phone className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Phone</p>
+                  <p className="font-medium text-foreground">טלפון</p>
                   <p className="text-muted-foreground">(555) 123-4567</p>
                 </div>
               </div>
@@ -141,7 +142,7 @@ export function BookingSection() {
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Email</p>
+                  <p className="font-medium text-foreground">אימייל</p>
                   <p className="text-muted-foreground">hello@alphadog.training</p>
                 </div>
               </div>
@@ -151,8 +152,8 @@ export function BookingSection() {
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Location</p>
-                  <p className="text-muted-foreground">Serving the Greater Metro Area</p>
+                  <p className="font-medium text-foreground">מיקום</p>
+                  <p className="text-muted-foreground">משרתים את אזור המטרופולין</p>
                 </div>
               </div>
             </div>
@@ -161,7 +162,7 @@ export function BookingSection() {
             <div className="relative mt-8">
               <img
                 src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop"
-                alt="Happy dogs running in a field"
+                alt="כלבים מאושרים רצים בשדה"
                 className="rounded-2xl shadow-lg object-cover w-full h-64"
               />
             </div>
@@ -176,19 +177,19 @@ export function BookingSection() {
           >
             <Card className="bg-card border-border shadow-xl">
               <CardHeader>
-                <CardTitle className="font-serif">Request a Consultation</CardTitle>
+                <CardTitle className="font-serif">בקש פגישת ייעוץ</CardTitle>
                 <CardDescription>
-                  Fill out the form and we'll get back to you within 24 hours.
+                  מלאו את הטופס ונחזור אליכם תוך 24 שעות.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
+                      <Label htmlFor="name">שם מלא</Label>
                       <Input
                         id="name"
-                        placeholder="John Doe"
+                        placeholder="ישראל ישראלי"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
@@ -199,7 +200,7 @@ export function BookingSection() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder="israel@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
@@ -209,7 +210,7 @@ export function BookingSection() {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
+                      <Label htmlFor="phone">מספר טלפון</Label>
                       <Input
                         id="phone"
                         type="tel"
@@ -220,37 +221,37 @@ export function BookingSection() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label>Service</Label>
+                      <Label>שירות</Label>
                       <Select
                         value={formData.service}
                         onValueChange={(value) => setFormData({ ...formData, service: value })}
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a service" />
+                          <SelectValue placeholder="בחר שירות" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="obedience">Obedience Training</SelectItem>
-                          <SelectItem value="puppy">Puppy Socialization</SelectItem>
-                          <SelectItem value="behavioral">Behavioral Correction</SelectItem>
-                          <SelectItem value="other">Other / Not Sure</SelectItem>
+                          <SelectItem value="obedience">אילוף צייתנות</SelectItem>
+                          <SelectItem value="puppy">סוציאליזציה לגורים</SelectItem>
+                          <SelectItem value="behavioral">תיקון התנהגותי</SelectItem>
+                          <SelectItem value="other">אחר / לא בטוח</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label>Preferred Date</Label>
+                    <Label>תאריך מועדף</Label>
                     <Popover>
                       <PopoverTrigger asChild>
                         <Button
                           variant="outline"
                           className={cn(
-                            "w-full justify-start text-left font-normal",
+                            "w-full justify-start text-start font-normal",
                             !date && "text-muted-foreground"
                           )}
                         >
-                          <CalendarIcon className="mr-2 h-4 w-4" />
-                          {date ? format(date, "PPP") : "Pick a date"}
+                          <CalendarIcon className="me-2 h-4 w-4" />
+                          {date ? format(date, "PPP", { locale: he }) : "בחר תאריך"}
                         </Button>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
@@ -259,6 +260,7 @@ export function BookingSection() {
                           selected={date}
                           onSelect={setDate}
                           disabled={(date) => date < new Date()}
+                          locale={he}
                           initialFocus
                         />
                       </PopoverContent>
@@ -266,10 +268,10 @@ export function BookingSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message (Optional)</Label>
+                    <Label htmlFor="message">הודעה (אופציונלי)</Label>
                     <Textarea
                       id="message"
-                      placeholder="Tell us about your dog and what you're hoping to achieve..."
+                      placeholder="ספרו לנו על הכלב שלכם ומה אתם מקווים להשיג..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       rows={4}
@@ -277,7 +279,7 @@ export function BookingSection() {
                   </div>
 
                   <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? "Submitting..." : "Request Consultation"}
+                    {isSubmitting ? "שולח..." : "בקש פגישת ייעוץ"}
                   </Button>
                 </form>
               </CardContent>

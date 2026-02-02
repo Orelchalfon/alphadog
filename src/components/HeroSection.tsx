@@ -60,7 +60,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-start"
           >
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -68,17 +68,17 @@ export function HeroSection() {
               transition={{ delay: 0.2 }}
               className="text-primary font-medium mb-4 tracking-wide uppercase text-sm"
             >
-              Professional Dog Training
+              אילוף כלבים מקצועי
             </motion.p>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight mb-6">
-              <AnimatedText text="Transforming Your" />
+              <AnimatedText text="שינוי ההתנהגות" />
               <br />
               <span className="text-primary">
-                <AnimatedText text="Dog's Behavior" />
+                <AnimatedText text="של הכלב שלכם" />
               </span>
               <br />
-              <AnimatedText text="With Expert Care" />
+              <AnimatedText text="בטיפול מקצועי" />
             </h1>
 
             <motion.p
@@ -87,7 +87,7 @@ export function HeroSection() {
               transition={{ delay: 1 }}
               className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0"
             >
-              Building lasting bonds through positive reinforcement, patience, and proven training techniques tailored to your dog's unique personality.
+              בניית קשר ארוך טווח באמצעות חיזוק חיובי, סבלנות וטכניקות אילוף מוכחות המותאמות לאישיות הייחודית של הכלב שלכם.
             </motion.p>
 
             <motion.div
@@ -97,7 +97,7 @@ export function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button size="lg" onClick={scrollToContact} className="text-base px-8">
-                Book a Consultation
+                הזמן פגישת ייעוץ
               </Button>
               <Button
                 size="lg"
@@ -105,7 +105,7 @@ export function HeroSection() {
                 onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
                 className="text-base"
               >
-                Explore Services
+                גלה את השירותים
               </Button>
             </motion.div>
           </motion.div>
@@ -121,7 +121,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl transform rotate-3" />
               <img
                 src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=600&fit=crop"
-                alt="Professional dog trainer with a happy golden retriever"
+                alt="מאלף כלבים מקצועי עם גולדן רטריבר מאושר"
                 className="relative rounded-3xl object-cover w-full h-full shadow-xl"
               />
               {/* Stats Badge */}
@@ -132,7 +132,7 @@ export function HeroSection() {
                 className="absolute -left-4 bottom-8 bg-card p-4 rounded-xl shadow-lg border border-border"
               >
                 <p className="text-3xl font-bold text-primary">500+</p>
-                <p className="text-sm text-muted-foreground">Dogs Trained</p>
+                <p className="text-sm text-muted-foreground">כלבים שאולפו</p>
               </motion.div>
               {/* Rating Badge */}
               <motion.div
@@ -142,7 +142,7 @@ export function HeroSection() {
                 className="absolute -right-4 top-8 bg-card p-4 rounded-xl shadow-lg border border-border"
               >
                 <p className="text-3xl font-bold text-primary">4.9★</p>
-                <p className="text-sm text-muted-foreground">Client Rating</p>
+                <p className="text-sm text-muted-foreground">דירוג לקוחות</p>
               </motion.div>
             </div>
           </motion.div>
@@ -160,7 +160,7 @@ export function HeroSection() {
             transition={{ repeat: Infinity, duration: 2 }}
             className="flex flex-col items-center gap-2 text-muted-foreground"
           >
-            <span className="text-xs">Scroll to explore</span>
+            <span className="text-xs">גלול לגלות</span>
             <ArrowDown className="h-4 w-4" />
           </motion.div>
         </motion.div>

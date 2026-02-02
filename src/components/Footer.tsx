@@ -3,19 +3,19 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const footerLinks = {
   services: [
-    { label: "Obedience Training", href: "#services" },
-    { label: "Puppy Socialization", href: "#services" },
-    { label: "Behavioral Correction", href: "#services" },
+    { label: "אילוף צייתנות", href: "#services" },
+    { label: "סוציאליזציה לגורים", href: "#services" },
+    { label: "תיקון התנהגותי", href: "#services" },
   ],
   company: [
-    { label: "About Us", href: "#" },
-    { label: "Our Team", href: "#" },
-    { label: "Careers", href: "#" },
+    { label: "אודותינו", href: "#" },
+    { label: "הצוות שלנו", href: "#" },
+    { label: "קריירה", href: "#" },
   ],
   support: [
-    { label: "Contact", href: "#contact" },
-    { label: "FAQ", href: "#" },
-    { label: "Privacy Policy", href: "#" },
+    { label: "צור קשר", href: "#contact" },
+    { label: "שאלות נפוצות", href: "#" },
+    { label: "מדיניות פרטיות", href: "#" },
   ],
 };
 
@@ -50,7 +50,7 @@ export function Footer() {
             <div className="lg:col-span-2">
               <h3 className="font-serif text-2xl font-bold mb-4">AlphaDog</h3>
               <p className="text-background/70 mb-6 max-w-sm">
-                Transforming dog behavior through expert training, patience, and proven positive reinforcement techniques.
+                שינוי התנהגות כלבים באמצעות אימון מקצועי, סבלנות וטכניקות חיזוק חיובי מוכחות.
               </p>
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
@@ -68,7 +68,7 @@ export function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
+              <h4 className="font-semibold mb-4">שירותים</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link) => (
                   <li key={link.label}>
@@ -85,7 +85,7 @@ export function Footer() {
 
             {/* Company */}
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4">חברה</h4>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.label}>
@@ -102,7 +102,7 @@ export function Footer() {
 
             {/* Support */}
             <div>
-              <h4 className="font-semibold mb-4">Support</h4>
+              <h4 className="font-semibold mb-4">תמיכה</h4>
               <ul className="space-y-3">
                 {footerLinks.support.map((link) => (
                   <li key={link.label}>
@@ -121,10 +121,10 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/50 text-sm">
-              © {new Date().getFullYear()} AlphaDog. All rights reserved.
+              © {new Date().getFullYear()} AlphaDog. כל הזכויות שמורות.
             </p>
             <p className="text-background/50 text-sm">
-              Made with ❤️ for dog lovers everywhere
+              נעשה באהבה לאוהבי כלבים בכל מקום
             </p>
           </div>
         </motion.div>

@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        sans: ["Heebo", "sans-serif"],
         serif: ["Libre Baskerville", "serif"],
       },
       colors: {

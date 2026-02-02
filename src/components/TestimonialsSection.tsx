@@ -6,31 +6,31 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    dogName: "Max",
+    name: "שרה מיטשל",
+    dogName: "מקס",
     rating: 5,
-    text: "AlphaDog completely transformed Max from an anxious, reactive dog into a calm and confident companion. The patience and expertise shown during every session was remarkable.",
+    text: "AlphaDog שינה לחלוטין את מקס מכלב חרד וריאקטיבי לרגוע ובטוח. הסבלנות והמומחיות שהופגנו בכל מפגש היו מדהימות.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
   },
   {
-    name: "Michael Chen",
-    dogName: "Luna",
+    name: "מיכאל צ'ן",
+    dogName: "לונה",
     rating: 5,
-    text: "Our puppy Luna was a handful before training. Now she follows commands, walks perfectly on leash, and has become the perfect family dog. Highly recommend!",
+    text: "הגור שלנו לונה היה אתגר לפני האימון. עכשיו היא מצייתת לפקודות, הולכת יפה ברצועה והפכה לכלב משפחה מושלם. ממליצים בחום!",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
   },
   {
-    name: "Emma Thompson",
-    dogName: "Cooper",
+    name: "אמה תומפסון",
+    dogName: "קופר",
     rating: 5,
-    text: "After trying multiple trainers, we finally found AlphaDog. Their behavioral correction program helped Cooper overcome his fear-based aggression. Life-changing!",
+    text: "אחרי שניסינו מאלפים רבים, סוף סוף מצאנו את AlphaDog. תוכנית תיקון ההתנהגות עזרה לקופר להתגבר על התוקפנות מבוססת הפחד שלו. שינוי חיים!",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
   },
   {
-    name: "David Rodriguez",
-    dogName: "Bella",
+    name: "דוד רודריגז",
+    dogName: "בלה",
     rating: 5,
-    text: "The puppy socialization program was exactly what Bella needed. She's now confident around other dogs and people. Thank you, AlphaDog!",
+    text: "תוכנית הסוציאליזציה לגורים הייתה בדיוק מה שבלה הייתה צריכה. עכשיו היא בטוחה ליד כלבים ואנשים אחרים. תודה, AlphaDog!",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
   },
 ];
@@ -57,13 +57,13 @@ export function TestimonialsSection() {
           className="text-center mb-16"
         >
           <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">
-            Testimonials
+            המלצות
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            What Our Clients Say
+            מה הלקוחות שלנו אומרים
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hear from the families we've helped build stronger bonds with their furry friends.
+            שמעו מהמשפחות שעזרנו לבנות קשרים חזקים יותר עם החברים הפרוותיים שלהם.
           </p>
         </motion.div>
 
@@ -94,10 +94,10 @@ export function TestimonialsSection() {
                       {testimonials[currentIndex].name}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      Dog: {testimonials[currentIndex].dogName}
+                      כלב: {testimonials[currentIndex].dogName}
                     </p>
                   </div>
-                  <div className="ml-auto flex gap-0.5">
+                  <div className="ms-auto flex gap-0.5">
                     {Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
                       <Star key={i} className="h-5 w-5 fill-primary text-primary" />
                     ))}
@@ -113,7 +113,7 @@ export function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={prevTestimonial}
-              aria-label="Previous testimonial"
+              aria-label="המלצה קודמת"
               className="rounded-full"
             >
               <ChevronLeft className="h-5 w-5" />
@@ -124,7 +124,7 @@ export function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  aria-label={`Go to testimonial ${index + 1}`}
+                  aria-label={`עבור להמלצה ${index + 1}`}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     index === currentIndex ? "bg-primary" : "bg-border hover:bg-primary/50"
                   }`}
@@ -136,7 +136,7 @@ export function TestimonialsSection() {
               variant="outline"
               size="icon"
               onClick={nextTestimonial}
-              aria-label="Next testimonial"
+              aria-label="המלצה הבאה"
               className="rounded-full"
             >
               <ChevronRight className="h-5 w-5" />

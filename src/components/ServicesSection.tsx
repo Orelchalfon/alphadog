@@ -7,21 +7,21 @@ const easeOut: Easing = [0.4, 0, 0.2, 1];
 const services = [
   {
     icon: GraduationCap,
-    title: "Obedience Training",
-    description: "Build a strong foundation with essential commands like sit, stay, heel, and recall. Perfect for dogs of all ages.",
-    features: ["Basic & Advanced Commands", "Leash Manners", "Focus & Attention Training"],
+    title: "אילוף צייתנות",
+    description: "בניית בסיס חזק עם פקודות חיוניות כמו שב, הישאר, לרגל וחזור. מתאים לכלבים בכל הגילאים.",
+    features: ["פקודות בסיסיות ומתקדמות", "נימוסי רצועה", "אימון ריכוז וקשב"],
   },
   {
     icon: Heart,
-    title: "Puppy Socialization",
-    description: "Early behavioral shaping for puppies to develop confidence and positive associations with the world around them.",
-    features: ["Positive Exposure", "Bite Inhibition", "Crate & Potty Training"],
+    title: "סוציאליזציה לגורים",
+    description: "עיצוב התנהגותי מוקדם לגורים לפיתוח ביטחון ואסוציאציות חיוביות עם העולם סביבם.",
+    features: ["חשיפה חיובית", "עיכוב נשיכות", "אימון כלוב וניקיון"],
   },
   {
     icon: Shield,
-    title: "Behavioral Correction",
-    description: "Address anxiety, aggression, and unwanted habits with proven, compassionate techniques tailored to your dog.",
-    features: ["Anxiety Management", "Reactivity Training", "Fear Desensitization"],
+    title: "תיקון התנהגותי",
+    description: "טיפול בחרדה, תוקפנות והרגלים לא רצויים בטכניקות מוכחות ומלאות חמלה המותאמות לכלב שלכם.",
+    features: ["ניהול חרדה", "אימון ריאקטיביות", "הקהיית פחדים"],
   },
 ];
 
@@ -59,13 +59,13 @@ export function ServicesSection() {
           className="text-center mb-16"
         >
           <p className="text-primary font-medium mb-2 tracking-wide uppercase text-sm">
-            Our Services
+            השירותים שלנו
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-            Training Programs for Every Dog
+            תוכניות אילוף לכל כלב
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Whether you have a new puppy or an adult dog with behavioral challenges, we have the expertise to help.
+            בין אם יש לכם גור חדש או כלב בוגר עם אתגרים התנהגותיים, יש לנו את המומחיות לעזור.
           </p>
         </motion.div>
 
